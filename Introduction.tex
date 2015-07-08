@@ -1,113 +1,23 @@
 \section{Introduction}
-% no \IEEEPARstart
-%% Olfactory perception description
-
-%% Previous work on olfactory perception
-
-%% Previous work on emotion-related olfactory perception
-
-%% Paper structure
-
-
-%\hfill mds
- 
-%\hfill January 11, 2007
-
-
-
-% An example of a floating figure using the graphicx package.
-% Note that \label must occur AFTER (or within) \caption.
-% For figures, \caption should occur after the \includegraphics.
-% Note that IEEEtran v1.7 and later has special internal code that
-% is designed to preserve the operation of \label within \caption
-% even when the captionsoff option is in effect. However, because
-% of issues like this, it may be the safest practice to put all your
-% \label just after \caption rather than within \caption{}.
-%
-% Reminder: the "draftcls" or "draftclsnofoot", not "draft", class
-% option should be used if it is desired that the figures are to be
-% displayed while in draft mode.
-%
-%\begin{figure}[!t]
-%\centering
-%\includegraphics[width=2.5in]{myfigure}
-% where an .eps filename suffix will be assumed under latex, 
-% and a .pdf suffix will be assumed for pdflatex; or what has been declared
-% via \DeclareGraphicsExtensions.
-%\caption{Simulation Results}
-%\label{fig_sim}
-%\end{figure}
-
-% Note that IEEE typically puts floats only at the top, even when this
-% results in a large percentage of a column being occupied by floats.
-
-
-% An example of a double column floating figure using two subfigures.
-% (The subfig.sty package must be loaded for this to work.)
-% The subfigure \label commands are set within each subfloat command, the
-% \label for the overall figure must come after \caption.
-% \hfil must be used as a separator to get equal spacing.
-% The subfigure.sty package works much the same way, except \subfigure is
-% used instead of \subfloat.
-%
-%\begin{figure*}[!t]
-%\centerline{\subfloat[Case I]\includegraphics[width=2.5in]{subfigcase1}%
-%\label{fig_first_case}}
-%\hfil
-%\subfloat[Case II]{\includegraphics[width=2.5in]{subfigcase2}%
-%\label{fig_second_case}}}
-%\caption{Simulation results}
-%\label{fig_sim}
-%\end{figure*}
-%
-% Note that often IEEE papers with subfigures do not employ subfigure
-% captions (using the optional argument to \subfloat), but instead will
-% reference/describe all of them (a), (b), etc., within the main caption.
-
-
-% An example of a floating table. Note that, for IEEE style tables, the 
-% \caption command should come BEFORE the table. Table text will default to
-% \footnotesize as IEEE normally uses this smaller font for tables.
-% The \label must come after \caption as always.
-%
-%\begin{table}[!t]
-%% increase table row spacing, adjust to taste
-%\renewcommand{\arraystretch}{1.3}
-% if using array.sty, it might be a good idea to tweak the value of
-% \extrarowheight as needed to properly center the text within the cells
-%\caption{An Example of a Table}
-%\label{table_example}
-%\centering
-%% Some packages, such as MDW tools, offer better commands for making tables
-%% than the plain LaTeX2e tabular which is used here.
-%\begin{tabular}{|c||c|}
-%\hline
-%One & Two\\
-%\hline
-%Three & Four\\
-%\hline
-%\end{tabular}
-%\end{table}
-
-
-% Note that IEEE does not put floats in the very first column - or typically
-% anywhere on the first page for that matter. Also, in-text middle ("here")
-% positioning is not used. Most IEEE journals/conferences use top floats
-% exclusively. Note that, LaTeX2e, unlike IEEE journals/conferences, places
-% footnotes above bottom floats. This can be corrected via the \fnbelowfloat
-% command of the stfloats package.
 
 % AFFECTIVE COMPUTING GENERAL IDEA
 
 % PRIMARY RESPONSE TO ODORS, LINKS WITH EMOTIONS AND AFFECTIVE COMPUTING
 %Olfactory perception can rise different primary responses in emotions. The rised emotional responses differ significantly between individuals with variations in pleasantness. Different subjects may give different emotional responses to the same odor. The mechanism of the variation between different individuals in perception of odors is still unclear. Different approaches in studying odor perception have been proposed by many groups both in physiological point of view~\cite{galizia2000odour} and genetic point of view~\cite{keller2007genetic}.
-Emotion is involved in every aspect of human life, thus, it has gained attention in many research disciplines, including computer science. For instance, multimedia systems are increasingly becoming immersive, in order to evoke strong emotions and render user-experience more realistic. Traditionally, multimedia systems include video and audio contents, they, thus, mainly stimulate the visual and auditory senses. Nevertheless, recently odors have started to be incorporated into multimedia systems (e.g., \cite{nakamoto2011olfactory,nakamoto2008cooking,richard2006multi}), since they directly stimulate memories and elicit strong emotions. However, emotion elicitation from odors has not been adequately investigated, although the primary response to smell is related to pleasantness perception \cite{gulas1995right}. 
+Perception of pleasantness from various stimuli has been investigated by various researchers through different means. Many studies have been conducted on the investigation of pleasantness perception through facial expressions~\cite{lyons1998coding}, food intake\cite{de2003taste}, languages~\cite{bellezza1986words}, etc. Research on pleasantness detection and classification has been carried out by analyzing brain activity using various brain imaging techniques(e.g.,~\cite{zatorre2000neural,kringelbach2003activation,kroupi2014eeg}).
 
-% RESEARCHER'S INVESTIGATIONS ON PLEASANTNESS
-Perception of pleasantness from various stimuli has been investigated by various researchers through different means. Many studies have been conducted on the investigation of pleasantness perception through facial expressions~\cite{lyons1998coding}, food intake\cite{de2003taste}, languages~\cite{bellezza1986words}, etc. Research on pleasantness detection and classification has been carried out by analyzing brain activity, especially using Positron Emission Tomography (PET)~\cite{zatorre2000neural} and functional Magnetic Resonance Imaging (fMRI)~\cite{kringelbach2003activation}. EEG approaches in emotion detection and recognition have been also conducted by various research groups to classify the emotional responses of pleasantness from various affective stimuli (e.g., ).
+
+Since multimedia systems are increasingly becoming immersive by rendering more realistic user-experience, which makes it better in evoking strong emotions. To study the emotion reactions to differnt multimedia contents can help us better understand, recognize and interpret the emotion responses to them, and further more can help us to simulate human affects to multimedia contents. Traditionally, multimedia systems include video and audio contents, they, thus, mainly stimulate the visual and auditory senses. Nevertheless, recently odors have started to be incorporated into multimedia systems (e.g., \cite{nakamoto2011olfactory,nakamoto2008cooking,richard2006multi}), since they directly stimulate memories and elicit strong emotions. However, emotion elicitation from odors has not been adequately investigated, although the primary response to smell is related to pleasantness perception \cite{gulas1995right}. 
+
 
 % PREVIOUS WORKS/PAPERS ON ANALYSIS FROM PSD, BANDS FEATURES
-Although pleasantness perception has been thoroughly analysed for various, especially audiovisual, stimuli, it has received less attention during experience of odors. Moreover, various EEG studies on investigating odor pleasantness have analysed brain activation in terms of power spectral density features, but further information from EEG could equally or better contribute to a deeper understanding of pleasantness perception from odors. For instance, a question that still remains unanswered is regarding the way in which odor pleasantness influences functional connectivity patterns in remote brain locations. The hypothesis is that there are differences in the functional connectivity patterns when subjects experience pleasant and when they experience unpleasant odors. 
+Although pleasantness perception has been thoroughly analysed for various, especially audiovisual, stimuli, it has received less attention during experience of odors. Various Electroencephalography (EEG) studies on investigating odor pleasantness have analysed brain activation in terms of power spectral density features in frequency domain. 
+
+%%++++++++++++++++++++
+To better understand and classify the pleasantness during odor perceiving, more information on how olfactory perception can affect emotions need to be discovered. To contribute to this study, we propose to study the functional connectivity patterns in remote brain locations during olfactory perception process. Our hypothesis is that there are differences in the functional connectivity patterns when subjects experience pleasant and unpleasant odors. 
+%%++++++++++++++++++++
+
+ but further information from EEG could equally or better contribute to a deeper understanding of pleasantness perception from odors. For instance, a question that still remains unanswered is regarding the way in which odor pleasantness influences functional connectivity patterns in remote brain locations. The hypothesis is that there are differences in the functional connectivity patterns when subjects experience pleasant and when they experience unpleasant odors. 
 
 %The emotion status during odor perception still need to be investigated for a better understanding the olfactory perception and emotion generation processes. The current studies on classifying emotional responses from odors based on EEG signals are more focused on extracting features of power spectral density, workload index (WI), permutation entropy, dimension of minimal covers~\cite{kroupi2014eeg}. 
 
